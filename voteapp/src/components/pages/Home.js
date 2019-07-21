@@ -4,7 +4,9 @@ import Card from '../organisms/Card'
 
 
 class Home extends React.Component {
-    state = { engineerList: [] }
+    state = {
+        engineerList: [],
+    }
 
     componentDidMount() {
         API.getEngineerInfo().then((res) => {
@@ -18,10 +20,6 @@ class Home extends React.Component {
         </div>
     }
 
-
-
 }
-
-
 
 export default Home;
