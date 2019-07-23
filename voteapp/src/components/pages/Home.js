@@ -16,7 +16,9 @@ class Home extends React.Component {
 
     render() {
         return <div>
-            <Card list={this.state.engineerList} />
+            {this.state.engineerList.map(object => (
+                <Card engineer={object} />
+            ))}
         </div>
     }
 
