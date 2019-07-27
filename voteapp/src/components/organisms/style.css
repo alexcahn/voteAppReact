@@ -22,3 +22,20 @@ body{
 .bio{
     font-size: 14px;
 }
+
+button{
+    background-color: white;
+    border: none;
+    margin-bottom: 5px;
+    outline: none !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+button img{
+    height: 24px;
+    width: 15px;
+    margin: 0;
+    margin-right: 2px;
+}
