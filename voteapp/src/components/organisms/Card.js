@@ -5,7 +5,7 @@ class Card extends React.Component {
 
     state = {
         count: 0,
-        guid: ''
+        guid: '',
     }
 
     componentDidMount() {
@@ -25,7 +25,7 @@ class Card extends React.Component {
         if (this.props.guidArray.includes(this.state.guid)) {
             localStorage.setItem('count', this.state.count);
             this.setState({
-                count: this.state.count + 1
+                count: 1,
             })
         }
     };
