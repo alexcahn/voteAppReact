@@ -1,38 +1,19 @@
 import React from 'react';
 import "./style.css"
+import API from "../../utils/API"
 
 class Card extends React.Component {
 
     state = {
         count: 0,
-        guid: '',
     }
-
-    componentDidMount() {
-        this.getGuid(window.navigator.userAgent.replace(/\D+/g, ''))
-
-    }
-
-
-    getGuid = (gd) => {
-        this.setState({ guid: gd })
-        localStorage.setItem('guid', gd)
-    }
-
 
     handleIncrement = () => {
-
-        if (this.props.guidArray.includes(this.state.guid)) {
-            localStorage.setItem('count', this.state.count);
-            this.setState({
-                count: 1,
-            })
-        }
-    };
-
-    getLocal = () => {
-        localStorage.getItem('count')
-        localStorage.getItem('guid')
+        this.setState({
+            count: 1,
+            // clicked: true
+        })
+        API.updateCountTotal()
     }
 
     render() {
