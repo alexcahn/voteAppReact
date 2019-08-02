@@ -10,13 +10,8 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        this.loadEngineerInfo()
-    }
-
-    loadEngineerInfo = () => {
         API.getEngineerInfo()
             .then((res) => {
-                this.setState({ engineerList: res.data })
                 API.exportEngineerInfo(res.data)
             })
             .catch((err) => { console.log(err) })
